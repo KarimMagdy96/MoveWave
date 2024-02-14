@@ -65,40 +65,6 @@ export default function Login(props) {
         isLoading(false);
       }
     );
-    // const client = new Client()
-
-    //   .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
-
-    //   .setProject("65c9445135cc99abf695"); // Your project ID
-
-    // const account = new Account(client);
-
-    // const promise = account.createEmailSession(user.email, user.password);
-
-    // promise.then(
-    //   function (response) {
-    //     console.log(response); // Success
-
-    //     isLoading(false);
-
-    //     const SuccessfullyLogin = () => toast("👋 Welcome");
-
-    //     SuccessfullyLogin();
-
-    //     // navigate to login
-    //     navigateToHome();
-    //   },
-
-    //   function (error) {
-    //     // Failure
-
-    //     let myerror = () => toast("❌ Invalid Email or Password");
-
-    //     myerror();
-
-    //     isLoading(false);
-    //   }
-    // );
   }
 
   /************************************/
@@ -117,7 +83,6 @@ export default function Login(props) {
     let myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
-    console.log(user);
   }
 
   // ********************************

@@ -89,7 +89,6 @@ export default function SignUp() {
     let myUser = { ...user };
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
-    console.log(user);
   }
 
   // ********************************

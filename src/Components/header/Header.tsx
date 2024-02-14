@@ -1,8 +1,12 @@
 import React from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import img from "../../assets/img/logoDay.png";
 export default function Header() {
+  function logout() {
+    localStorage.removeItem("CurrentUser");
+    localStorage.removeItem("email");
+  }
   return (
     <>
       <nav className="navbar navbar-expand-md  bg-body-tertiary fixed-top">
@@ -76,7 +80,12 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="nav-link active" aria-current="page" to="*">
+                  <Link
+                    onClick={logout}
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/login"
+                  >
                     LogOut
                   </Link>
                 </li>
