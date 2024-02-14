@@ -1,1 +1,7 @@
-/*# sourceMappingURL=home.css.map */
+.carousel-control-prev {
+  left: -40px !important;
+}
+
+.carousel-control-next {
+  right: -40px !important;
+}/*# sourceMappingURL=home.css.map */

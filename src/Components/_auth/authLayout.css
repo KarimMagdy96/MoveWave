@@ -1,6 +1,6 @@
 .authMain {
   height: 100vh;
-  background-image: url("../../assets/img/wallpaper-1.webp");
+  background-image: url("../../assets/img/wallpaper-1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,4 +11,4 @@
 }
 .authMain .loginFormContainer {
   background-color: rgba(0, 0, 0, 0.75);
-} /*# sourceMappingURL=authLayout.css.map */
+}/*# sourceMappingURL=authLayout.css.map */
