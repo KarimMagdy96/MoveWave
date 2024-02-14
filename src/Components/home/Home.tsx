@@ -22,21 +22,28 @@ export default function Home() {
   }, []);
   return (
     <>
-      <section className=" w-100 vh-100  overflow-hidden">
+      <section className=" w-100 rounded-0  overflow-hidden">
         <div
           id="carouselExampleFade"
           className="carousel overflow-hidden  slide carousel-fade"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active w-100 vh-100">
-              <img src={image} className="d-block w-100" alt="..." />
+            <div className="carousel-item active ">
+              <img
+                src="https://image.tmdb.org/t/p/w500//6OnoMgGFuZ921eV8v8yEyXoag19.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
             </div>
-            <div className="carousel-item  w-100 vh-100">
-              <img src={image} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item  w-100 vh-100">
-              <img src={image} className="d-block w-100" alt="..." />
-            </div>
+            {show.map((item, index) => (
+              <div key={index} className="carousel-item ">
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
+                  className="d-block w-100"
+                  alt=""
+                />
+              </div>
+            ))}
           </div>
           <button
             className="carousel-control-prev"
@@ -63,19 +70,27 @@ export default function Home() {
           <div className=" fw-bold fs-5 mb-5">
             latest Distributions <i className="fa-solid fa-minus fs-5"></i>
           </div>
+          {console.log(show)}
           <div className="row row-cols-1 row-cols-md-4 g-4">
             {show.map((item) => (
               <div className="col" key={item.id}>
-                <div className="card h-100">
+                <div className="card h-100 bg-transparent text-white">
                   <img
                     src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                    className="card-img-top"
-                    alt="..."
+                    className="card-img-top rounded-3"
+                    alt={item.title}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">
-                      {item.overview.substring(0, 100)}...
+                    <p className="card-text text-secondary">
+                      {item.overview.substring(0, 50)}...
+                    </p>
+                    <p>
+                      Release Date <span className=" fs-1  mx-2">.</span>{" "}
+                      {"   "}
+                      <span className=" text-danger fw-bold">
+                        {item.release_date}
+                      </span>
                     </p>
                   </div>
                 </div>
