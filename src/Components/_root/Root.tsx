@@ -11,7 +11,7 @@ export default function Root(props) {
         <section className=" vh-100 ">
           <Outlet></Outlet>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </>
     )
   );

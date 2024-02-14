@@ -1,7 +1,8 @@
-.carousel-control-prev {
-  left: -40px !important;
-}
-
-.carousel-control-next {
-  right: -40px !important;
+.home {
+  background-color: black;
+  width: 100%;
+  background-image: url("../../assets/img/film.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 110px;
 }/*# sourceMappingURL=home.css.map */
