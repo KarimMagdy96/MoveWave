@@ -10,9 +10,9 @@ export default function Header() {
   return (
     <>
       <nav className="navbar navbar-expand-md  bg-glass fixed-top">
-        <div className="container-fluid mx-md-4">
-          <Link className="navbar-brand" to="/home">
-            <img src={img} className=" img-fluid  w-50" alt="logo" />
+        <div className="container-fluid ">
+          <Link className="navbar-brand p-0 m-0" to="/home">
+            <img src={img} className="   w-75" alt="logo" />
           </Link>
           <button
             className="navbar-toggler"
