@@ -28,10 +28,10 @@ export default function Home() {
           className="carousel w-100 h-100 overflow-hidden  slide carousel-fade"
         >
           <div className="carousel-inner h-100 w-100">
-            <div className="carousel-item active W-100 ">
+            <div className="carousel-item active w-100 h-100">
               <div className=" text-danger container  position-absolute  top-0  bottom-0 start-0   end-0 w-100 h-100  z-3   ">
                 <div className="row  h-100">
-                  <div className="col-md-8 h-100  d-flex flex-column justify-content-center  align-items-start">
+                  <div className="col-md-8  h-100  d-flex flex-column justify-content-center  align-items-start">
                     <div>
                       <div className=" trans-withe mt-5  rounded-pill ps-1 py-1 pe-4">
                         <span className=" rounded-pill bg-danger text-white px-3 d-inline-block py-2 ">
@@ -46,7 +46,7 @@ export default function Home() {
                     <p className=" fw-bold p-0 m-0">
                       Release Date <span className=" fs-1  mx-2">.</span>{" "}
                       {"   "}
-                      <span className=" text-danger fw-bold">2024-01-05</span>
+                      <span className=" text-danger fw-bold"> 2024-01-05</span>
                     </p>
                     <p className="card-text text-secondary  ">
                       An ex-CIA operative is thrown back into a dangerous world
@@ -62,9 +62,9 @@ export default function Home() {
                 </div>
               </div>
               <img
-                src="https://image.tmdb.org/t/p/w500//6OnoMgGFuZ921eV8v8yEyXoag19.jpg"
-                className="d-block w-100"
-                alt="..."
+                src={`https://image.tmdb.org/t/p/w500//6OnoMgGFuZ921eV8v8yEyXoag19.jpg`}
+                className="d-block w-100 h-100"
+                alt=""
               />
             </div>
             {show.map((item, index) => (
