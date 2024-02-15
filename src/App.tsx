@@ -19,10 +19,10 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
 
   function ProtectedRoute(props) {
-    if (user) {
+    if (currentUser) {
       return props.children;
     } else {
-      return <Navigate to="/login" />;
+      return <Navigate to="login" />;
     }
   }
 

@@ -22,13 +22,45 @@ export default function Home() {
   }, []);
   return (
     <>
-      <section className=" w-100 rounded-0  hero">
+      <section className=" w-100 rounded-0 h-100  hero">
         <div
           id="carouselExampleFade"
-          className="carousel w-100 overflow-hidden  slide carousel-fade"
+          className="carousel w-100 h-100 overflow-hidden  slide carousel-fade"
         >
-          <div className="carousel-inner w-100">
+          <div className="carousel-inner h-100 w-100">
             <div className="carousel-item active W-100 ">
+              <div className=" text-danger container  position-absolute  top-0  bottom-0 start-0   end-0 w-100 h-100  z-3   ">
+                <div className="row  h-100">
+                  <div className="col-md-8 h-100  d-flex flex-column justify-content-center  align-items-start">
+                    <div>
+                      <div className=" trans-withe mt-5  rounded-pill ps-1 py-1 pe-4">
+                        <span className=" rounded-pill bg-danger text-white px-3 d-inline-block py-2 ">
+                          New
+                        </span>
+                        <span className=" text-white"> Best Of All Times</span>
+                      </div>
+                    </div>
+                    <div className="  fs-1   fw-bold  pt-5 text-white">
+                      The Painter
+                    </div>
+                    <p className=" fw-bold p-0 m-0">
+                      Release Date <span className=" fs-1  mx-2">.</span>{" "}
+                      {"   "}
+                      <span className=" text-danger fw-bold">2024-01-05</span>
+                    </p>
+                    <p className="card-text text-secondary  ">
+                      An ex-CIA operative is thrown back into a dangerous world
+                      when a mysterious woman from his past resurfaces. Now
+                      exposed and targeted by a relentless killer and a rogue
+                      black ops program, he must rely .
+                    </p>
+                    <button className=" btn btn-danger py-3  fw-light  px-4 shadow rounded-0 fs-6">
+                      <i className="fa-solid fa-caret-right me-1"></i>{" "}
+                      <span>Watch Now</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
               <img
                 src="https://image.tmdb.org/t/p/w500//6OnoMgGFuZ921eV8v8yEyXoag19.jpg"
                 className="d-block w-100"
@@ -36,10 +68,10 @@ export default function Home() {
               />
             </div>
             {show.map((item, index) => (
-              <div key={index} className="carousel-item ">
+              <div key={index} className="carousel-item w-100 h-100">
                 <div className=" text-danger container  position-absolute  top-0  bottom-0 start-0   end-0 w-100 h-100  z-3   ">
                   <div className="row  h-100">
-                    <div className="col-md-6 h-100  d-flex flex-column justify-content-center  align-items-start">
+                    <div className="col-md-8  h-100  d-flex flex-column justify-content-center  align-items-start">
                       <div>
                         <div className=" trans-withe mt-5  rounded-pill ps-1 py-1 pe-4">
                           <span className=" rounded-pill bg-danger text-white px-3 d-inline-block py-2 ">
@@ -61,7 +93,7 @@ export default function Home() {
                           {item.release_date}
                         </span>
                       </p>
-                      <p className="card-text text-secondary">
+                      <p className="card-text text-secondary  ">
                         {item.overview.substring(0, 200)}.
                       </p>
                       <button className=" btn btn-danger py-3  fw-light  px-4 shadow rounded-0 fs-6">
@@ -69,21 +101,11 @@ export default function Home() {
                         <span>Watch Now</span>
                       </button>
                     </div>
-                    <div className="col-md-6 d-flex flex-column justify-content-center  align-items-end">
-                      <iframe
-                        width="100%"
-                        height="315"
-                        src="https://www.youtube.com/embed/6tLvS6dyPCE?si=7gG-AN18zkt9cIF2"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen={true}
-                      ></iframe>
-                    </div>
                   </div>
                 </div>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
-                  className="d-block w-100"
+                  className="d-block w-100 h-100"
                   alt=""
                 />
               </div>

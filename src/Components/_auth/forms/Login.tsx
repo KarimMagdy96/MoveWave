@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../authLayout.css";
+
+import "./login.css";
 import { Client, Account, ID } from "appwrite";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
@@ -115,7 +116,7 @@ export default function Login(props) {
   // *******************************
 
   return (
-    <div className=" d-flex overflow-hidden container h-100  justify-content-center  align-items-center  ">
+    <div className=" d-flex overflow-hidden container h-100 mainstyle justify-content-center  align-items-center  ">
       <ToastContainer
         position="top-right"
         autoClose={1500}
