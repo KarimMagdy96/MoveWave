@@ -141,7 +141,7 @@ export default function Home() {
             latest Distributions <i className="fa-solid fa-minus fs-5"></i>
           </div>
 
-          <div className="row row-cols-1 row-cols-md-4 g-4">
+          <div className="row row-cols-2 row-cols-md-4 g-4">
             {show.map((item) => (
               <div className="col" key={item.id}>
                 <div className="card h-100 bg-transparent text-white">
@@ -169,7 +169,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section></section>
+      <section className="slidertest w-100 overflow-hidden pb-5 ">
+        <div className="">
+          <div className=" fw-bold fs-3   text-center mt-5 container">
+            Upcoming Movies
+          </div>
+          <div className=" container-fluid  ">
+            <SimpleSlider show={show} />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

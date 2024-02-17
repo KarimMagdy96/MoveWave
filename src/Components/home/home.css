@@ -31,4 +31,18 @@
 
 .hero {
   height: 75vh !important;
+}
+
+.slidertest {
+  max-width: 100%;
+  background-color: black;
+}
+
+.tt {
+  height: 400px !important;
+  width: 100 !important;
+}
+
+.slick-dots {
+  display: none !important;
 }/*# sourceMappingURL=home.css.map */
