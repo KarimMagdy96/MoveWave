@@ -3,7 +3,7 @@ import image from "../../assets/img/a.png";
 import Slider from "react-slick";
 import "./home.css";
 import axios from "axios";
-import SimpleSlider from "../Test";
+import SimpleSlider from "../slider/Slider";
 
 export default function Home() {
   const [show, setAllShows] = useState([]);
