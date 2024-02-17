@@ -3,7 +3,7 @@ import "./footter.css";
 export default function Footer() {
   return (
     <>
-      <footer className="py-5  w-100   bg-dark-subtle     ">
+      <footer className="py-5  w-100    bg-dark-subtle     ">
         <div className="container">
           <div className="row">
             <div className="col-6 col-md-2 mb-3">

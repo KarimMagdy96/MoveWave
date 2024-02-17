@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import image from "../../assets/img/a.png";
+import Slider from "react-slick";
 import "./home.css";
 import axios from "axios";
+import SimpleSlider from "../Test";
 
 export default function Home() {
   const [show, setAllShows] = useState([]);
@@ -20,14 +22,16 @@ export default function Home() {
 
     fetchshow();
   }, []);
+  // /////////////////
+
   return (
     <>
-      <section className=" w-100 rounded-0 h-100  hero">
+      <section className=" w-100 rounded-0  vh-100 overflow-hidden  hero">
         <div
           id="carouselExampleFade"
           className="carousel w-100 h-100 overflow-hidden  slide carousel-fade"
         >
-          <div className="carousel-inner h-100 w-100">
+          <div className="carousel-inner h-100 w-100 overflow-hidden ">
             <div className="carousel-item active w-100 h-100">
               <div className=" text-danger container  position-absolute  top-0  bottom-0 start-0   end-0 w-100 h-100  z-3   ">
                 <div className="row  h-100">
@@ -105,7 +109,7 @@ export default function Home() {
                 </div>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
-                  className="d-block w-100 h-100"
+                  className="d-block w-100 h-100 "
                   alt=""
                 />
               </div>
@@ -136,7 +140,7 @@ export default function Home() {
           <div className=" fw-bold fs-5 mb-5">
             latest Distributions <i className="fa-solid fa-minus fs-5"></i>
           </div>
-          {console.log(show)}
+
           <div className="row row-cols-1 row-cols-md-4 g-4">
             {show.map((item) => (
               <div className="col" key={item.id}>
@@ -165,6 +169,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section></section>
     </>
   );
 }

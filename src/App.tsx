@@ -22,7 +22,7 @@ function App() {
     if (currentUser) {
       return props.children;
     } else {
-      return <Navigate to="login" />;
+      return <Navigate to="home" />;
     }
   }
 
@@ -46,67 +46,21 @@ function App() {
         </Route>
 
         {/* Private Routes */}
-
-        <Route element={<Root />}>
-          <>
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/movies"
-              element={
-                <ProtectedRoute>
-                  <AllMoveies />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <ProtectedRoute>
-                  <About />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <ProtectedRoute>
-                  <ContactUs />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/movie"
-              element={
-                <ProtectedRoute>
-                  <Move />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <ProtectedRoute>
-                  <NotFound />
-                </ProtectedRoute>
-              }
-            />
-          </>
-        </Route>
+        {user ? (
+          <Route element={<Root />}>
+            <>
+              <Route path="/" element={<Home />} />
+              <Route path="/movies" element={<AllMoveies />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/movie" element={<Move />} />
+              <Route path="*" element={<NotFound />} />
+            </>
+          </Route>
+        ) : (
+          <Route path="*" element={<Navigate to="/login" />} />
+        )}
       </Routes>
     </>
   );

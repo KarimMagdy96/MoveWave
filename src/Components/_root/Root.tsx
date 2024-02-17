@@ -8,10 +8,11 @@ export default function Root(props) {
     (
       <>
         <Header />
-        <section className=" vh-100 ">
+
+        <section className="myRoot ">
           <Outlet></Outlet>
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </>
     )
   );
