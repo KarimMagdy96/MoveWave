@@ -12,7 +12,7 @@ export default function Root(props) {
         <section className="myRoot ">
           <Outlet></Outlet>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </>
     )
   );

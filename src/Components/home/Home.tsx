@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "./home.css";
 import axios from "axios";
 import SimpleSlider from "../slider/Slider";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [show, setAllShows] = useState([]);
@@ -90,7 +91,7 @@ export default function Home() {
                       <div className="  fs-1   fw-bold  pt-5 text-white">
                         {item.title}
                       </div>
-                      <p className=" fw-bold p-0 m-0">
+                      <p className=" fw-bold p-0 m-0 ">
                         Release Date <span className=" fs-1  mx-2">.</span>{" "}
                         {"   "}
                         <span className=" text-danger fw-bold">
@@ -144,26 +145,30 @@ export default function Home() {
           <div className="row row-cols-2 row-cols-md-4 g-4">
             {show.map((item) => (
               <div className="col" key={item.id}>
-                <div className="card h-100 bg-transparent text-white">
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                    className="card-img-top rounded-3"
-                    alt={item.title}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text text-secondary">
-                      {item.overview.substring(0, 50)}...
-                    </p>
-                    <p>
-                      Release Date <span className=" fs-1  mx-2">.</span>{" "}
-                      {"   "}
-                      <span className=" text-danger fw-bold">
-                        {item.release_date}
-                      </span>
-                    </p>
+                <Link
+                  to={`/move/${item.id} `}
+                  className=" text-decoration-none"
+                >
+                  <div className="card h-100 bg-transparent text-white">
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+                      className="card-img-top rounded-3"
+                      alt={item.title}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{item.title}</h5>
+                      <p className="card-text text-secondary">
+                        {item.overview.substring(0, 50)}...
+                      </p>
+                      <p>
+                        <div className=" fs-6  ">Release Date</div>{" "}
+                        <span className=" text-danger fw-bold fs-6 ">
+                          {item.release_date}
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -172,7 +177,8 @@ export default function Home() {
       <section className="slidertest w-100 overflow-hidden pb-5 ">
         <div className="">
           <div className=" fw-bold fs-3   text-center mt-5 container">
-            Upcoming Movies
+            <i className="fa-solid fa-minus fs-5"></i> Upcoming Movies{" "}
+            <i className="fa-solid fa-minus fs-5"></i>
           </div>
           <div className=" container-fluid  ">
             <SimpleSlider show={show} />

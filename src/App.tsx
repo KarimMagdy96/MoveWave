@@ -11,6 +11,7 @@ import About from "./Components/about/About";
 import ContactUs from "./Components/contactUs/ContactUs";
 import Home from "./Components/home/Home";
 import Move from "./Components/moveDetails/Move";
+
 import { func } from "joi";
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
           <Route element={<Root />}>
             <>
               <Route path="/" element={<Home />} />
+              <Route path="/move" element={<Move />}>
+                <Route path=":id" element={<Move />} />
+              </Route>
               <Route path="/movies" element={<AllMoveies />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<ContactUs />} />
