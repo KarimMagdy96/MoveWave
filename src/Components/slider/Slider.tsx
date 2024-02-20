@@ -48,7 +48,7 @@ function AutoPlay(props) {
               <div className="card h-100 bg-transparent text-white">
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                  className="card-img-top rounded-3 tt"
+                  className="card-img-top rounded-3 "
                   alt={item.title}
                 />
               </div>
