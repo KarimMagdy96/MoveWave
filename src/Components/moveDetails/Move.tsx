@@ -21,12 +21,65 @@ export default function Move() {
   return (
     <div>
       {movieDetails ? (
-        <div>
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
-            alt=""
-            className="img-fluid"
-          />
+        <div className="herodetails">
+          <div className=" herofilter w-100  position-relative">
+            <img
+              src={`  https://image.tmdb.org/t/p/w500/${movieDetails.backdrop_path}`}
+              alt=""
+              className="w-100 heroimg"
+            />
+            <div className=" ">
+              <div className=" container    text-white mt-4">
+                <div className="row ">
+                  <div className="col-md-6 fs-1  fw-bold ">
+                    <div className=" pe-5 ">
+                      <div className=" mb-2"> {movieDetails.title}</div>
+                      <div className=" fs-6 fw-normal mb-1   text-white">
+                        <span>
+                          {" "}
+                          {movieDetails.adult ? (
+                            <span className=" border px-1">PG-18</span>
+                          ) : (
+                            <span className=" border px-1">PG-16</span>
+                          )}
+                        </span>
+                        <span className=" mx-2">
+                          <span className="bg-warning fw-bold text-black px-1 mx-1 rounded-1">
+                            IMDB
+                          </span>
+                          <span className=" ps-1">
+                            {movieDetails.vote_average.toFixed(1)}
+                          </span>
+                        </span>
+                        <span className="  fw-bold">
+                          {" "}
+                          {movieDetails.release_date.substring(0, 4)}
+                        </span>
+                      </div>
+                      <div className="overviow">
+                        <p className="fs-6 fw-normal text-secondary mt-2">
+                          {movieDetails.overview}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className=" fs-2 fw-bold  mt-2 mb-3 ">
+                      Genres <i className="fa-solid fa-minus fs-5"></i>
+                    </div>
+                    {movieDetails.genres.map((item) => (
+                      <span
+                        className="fs-4  fw-normal p-3 text-danger  fw-bold  "
+                        key={item.id}
+                      >
+                        {item.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         "jyyyyyyyyyyyyy"

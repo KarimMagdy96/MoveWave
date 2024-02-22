@@ -74,6 +74,7 @@ export default function Home() {
             </div>
             {show.map((item, index) => (
               <div key={index} className="carousel-item w-100 h-100">
+                {console.log(item)}
                 <div className=" text-danger container  position-absolute  top-0  bottom-0 start-0   end-0 w-100 h-100  z-3   ">
                   <div className="row  h-100">
                     <div className="col-md-8  h-100  d-flex flex-column justify-content-center  align-items-start">
@@ -149,7 +150,7 @@ export default function Home() {
                   to={`/move/${item.id} `}
                   className=" text-decoration-none"
                 >
-                  <div className="card h-100 bg-transparent text-white">
+                  <div className="card h-100 bg-transparent text-white border-0">
                     <img
                       src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                       className="card-img-top rounded-3"
@@ -175,7 +176,7 @@ export default function Home() {
         </div>
       </section>
       <section className="slidertest w-100 overflow-hidden pb-5 ">
-        <div className="">
+        <div>
           <div className=" fw-bold fs-3   text-center mt-5 container">
             <i className="fa-solid fa-minus fs-5"></i> Upcoming Movies{" "}
             <i className="fa-solid fa-minus fs-5"></i>
