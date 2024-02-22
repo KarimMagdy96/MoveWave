@@ -1,1 +1,8 @@
-/*# sourceMappingURL=footter.css.map */
+.footer {
+  background-color: rgba(0, 0, 0, 0.947);
+  width: 100%;
+  background-image: url("../../assets/img/film.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+}/*# sourceMappingURL=footter.css.map */

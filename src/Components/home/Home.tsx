@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import image from "../../assets/img/a.png";
-import Slider from "react-slick";
 import "./home.css";
 import axios from "axios";
 import SimpleSlider from "../slider/Slider";
