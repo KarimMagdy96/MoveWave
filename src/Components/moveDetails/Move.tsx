@@ -51,7 +51,7 @@ export default function Move() {
                             {movieDetails.vote_average.toFixed(1)}
                           </span>
                         </span>
-                        <span className="  fw-bold">
+                        <span className="  fw-bold text-danger">
                           {" "}
                           {movieDetails.release_date.substring(0, 4)}
                         </span>
@@ -63,18 +63,15 @@ export default function Move() {
                       </div>
                     </div>
                   </div>
+
                   <div className="col-md-6">
-                    <div className=" fs-2 fw-bold  mt-2 mb-3 ">
-                      Genres <i className="fa-solid fa-minus fs-5"></i>
+                    <div className=" fs-5 fw-bold  mt-2 mb-3 ">
+                      Distribution Countries{" "}
+                      <i className="fa-solid fa-minus fs-5"></i>
                     </div>
-                    {movieDetails.genres.map((item) => (
-                      <span
-                        className="fs-4  fw-normal p-3 text-danger  fw-bold  "
-                        key={item.id}
-                      >
-                        {item.name}
-                      </span>
-                    ))}
+                    <span
+                      className={`fi fs-2  fi-${movieDetails.production_countries[0].iso_3166_1.toLowerCase()}`}
+                    />
                   </div>
                 </div>
               </div>
