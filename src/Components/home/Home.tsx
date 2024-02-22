@@ -24,8 +24,8 @@ export default function Home() {
   // /////////////////
 
   return (
-    <>
-      <section className=" w-100 rounded-0  vh-100 overflow-hidden  hero">
+    <section>
+      <div className=" w-100 rounded-0  vh-100 overflow-hidden  hero">
         <div
           id="carouselExampleFade"
           className="carousel w-100 h-100 overflow-hidden  slide carousel-fade"
@@ -134,8 +134,8 @@ export default function Home() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
-      <section className="home ">
+      </div>
+      <div className="home ">
         <div className="container ">
           <div className=" fw-bold fs-5 mb-5">
             latest Distributions <i className="fa-solid fa-minus fs-5"></i>
@@ -172,8 +172,8 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-      <section className="slidertest w-100 overflow-hidden pb-5 ">
+      </div>
+      <section className="slidertest w-100 overflow-hidden  ">
         <div>
           <div className=" fw-bold fs-3   text-center mt-5 container">
             <i className="fa-solid fa-minus fs-5"></i> Upcoming Movies{" "}
@@ -184,6 +184,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </section>
   );
 }

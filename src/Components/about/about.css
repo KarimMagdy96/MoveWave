@@ -1,1 +1,12 @@
-/*# sourceMappingURL=about.css.map */
+.about {
+  background-color: rgba(0, 0, 0, 0.947);
+  width: 100%;
+  background-image: url("../../assets/img/film.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about .hero_about {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../../assets/img/wallpaper.webp");
+}/*# sourceMappingURL=about.css.map */
