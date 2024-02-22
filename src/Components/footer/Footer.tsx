@@ -8,7 +8,7 @@ export default function Footer() {
         <div className=" position-absolute top-0 start-50  translate-middle ">
           <img src={img} width="250px" alt="" />
         </div>
-        <div className="container">
+        <div className="container mt-5">
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
               <h5>
